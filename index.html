@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cormorant+Garamond|IM+Fell+DW+Pica|Roboto" rel="stylesheet">
 
     <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
     <script type="text/javascript" src="./js/app.js"></script>
 
 
@@ -60,20 +63,66 @@
                 </div>
             </header>
         </div>
-        <section class="hero is-medium is-primary is-bold">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title"> Netcast Project Page </h1>
-                    <h2 class="subtitle"> a chromecast compatible web rpg </h2>
-                </div>
-            </div>
-        </section>
 
-        <div class="container is-fluid">
-            <div class="notification">
-                This container is <strong>fluid</strong>: it will have a 20px gap on either side, on any viewport size.
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title"> Netcast Project Page </h1>
+                <h2 class="subtitle"> a chromecast compatible web rpg </h2>
             </div>
         </div>
+    </section>
+
+    <div class="section">
+        <div id="root">
+
+            <tabs>
+                <tab name="Overview" :selected="true">
+                    <div class="content">
+                        <p>
+                            Using <a href="https://www.google.com/intl/en_us/chromecast/?utm_source=chromecast.com">Chromecast</a>, we are implementing a browser game that allows the user to use any Google Chrome compatible device as a controller and their TV as a display that communicates with the controller. Our main goals are as follows:
+
+                        </p>
+                        <ul>
+                            <li> Create a Custom Receiver that can manipulate what is displayed when webpage is cast. </li>
+                            <li> Adapt existing browser game, <a href="#">Centipede</a>, to be cast and controlled through Chromecast.</li>
+                            <li> Develop custom Chromecast game, <strong>Netcast</strong>, inpsired by the 1987 game <a href="http://www.nethack.org/">NetHack</a>.</li>
+                        </ul>
+
+
+                    </div>
+
+                </tab>
+                <tab name="Project Schedule">
+                    <h1> Content for art</h1>
+                </tab>
+                <tab name="Screenshots">
+                    <h1> Please come back later for updates!</h1>
+                </tab>
+            </tabs>
+            <br>
+            <br>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Made lovingly with <a href="http://bulma.io/">Bulma</a> + <a href="https://vuejs.org/">Vue.js</a>.
+                </p>
+                <p>
+                    <a class="icon" href="#">
+                        <i class="fa fa-hand-peace-o"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+    <script src="./js/main.js">
+    </script>
 
 </body>
 
