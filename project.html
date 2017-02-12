@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Netcast</title>
+    <title> Netcast | Project </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -32,7 +32,7 @@
             <header class="nav">
                 <div class="container">
                     <div class="nav-left">
-                        <a class="nav-item">
+                        <a class="nav-item" href="index.html">
                             <img src="images/logo.png" alt="Logo">
                         </a>
                     </div>
@@ -46,11 +46,9 @@
                     </span>
 
                     <div id='nav-menu' class="nav-right nav-menu">
-
-                        <a class="nav-item" href="/netcast/project.html"> Project </a>
+                         <a class="nav-item" href="/netcast/project.html"> Project </a>
                         <a class="nav-item" href="/netcast/team.html"> Team </a>
                         <a class="nav-item" href="/netcast/updates.html"> Updates </a>
-
                         <span class="nav-item">
                         <a class="button is-primary is-inverted" href="https://github.com/weirdpuppy/netcast">
                             <span class="icon">
@@ -64,44 +62,51 @@
             </header>
         </div>
 
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title"> Netcast Project Page </h1>
-                <h2 class="subtitle"> a chromecast compatible web rpg </h2>
-            </div>
-        </div>
+
     </section>
 
     <div class="section">
-        <div id="root">
+        <div class="container">
+            <div class="content">
+                <p class="title is-2">Project Overview</p>
+                <br>
+            </div>
+
+        </div>
+
+
+        <div class="container" id="root">
 
             <tabs>
-                <tab name="Overview" :selected="true">
+                <tab name="Requirements" :selected="true">
                     <div class="content">
-                        <p>
-                            Using <a href="https://www.google.com/intl/en_us/chromecast/?utm_source=chromecast.com">Chromecast</a>, we are implementing a browser game that allows the user to use any Google Chrome compatible device as a controller and their TV as a display that communicates with the controller. Our main goals are as follows:
 
-                        </p>
-                        <ul>
-                            <li> Create a Custom Receiver that can manipulate what is displayed when webpage is cast. </li>
-                            <li> Adapt existing browser game, <a href="#">Centipede</a>, to be cast and controlled through Chromecast.</li>
-                            <li> Develop custom Chromecast game, <strong>Netcast</strong>, inpsired by the 1987 game <a href="http://www.nethack.org/">NetHack</a>.</li>
-                        </ul>
 
-                        <p> For more information head on over to our <a href="/netcast/project.html"> Project</a> page!</p>
                     </div>
 
                 </tab>
-                <tab name="Screenshots">
-                    <h1> Coming soon!</h1>
+                <tab name="Design">
+                    <div class="content">
+
+                    </div>
                 </tab>
-                <tab name=".Readme">
-                    <h1> Coming Soon!</h1>
+                <tab name="Schedule">
+                    <div class="content">
+
+                    </div>
+                </tab>
+                <tab name="Testing">
+                    <div class="content">
+
+                    </div>
                 </tab>
             </tabs>
             <br>
             <br>
         </div>
+
+
+
     </div>
     <footer class="footer">
         <div class="container">
