@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Netcast | Updates</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cormorant+Garamond|IM+Fell+DW+Pica|Roboto" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+    <script type="text/javascript" src="./js/app.js"></script>
+
+
+</head>
+
+<body>
+    <section class="hero is-primary is-medium is-bold">
+        <!-- Hero header: will stick at the top -->
+        <div class="hero-head">
+            <header class="nav">
+                <div class="container">
+                    <div class="nav-left">
+                        <a class="nav-item" href="index.html">
+                            <img src="images/logo.png" alt="Logo">
+                        </a>
+                    </div>
+
+
+
+                    <span id="nav-toggle" class="nav-toggle">
+                        <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+
+                    <div id='nav-menu' class="nav-right nav-menu">
+                        <a class="nav-item" href="/team.html"> Team </a>
+                        <a class="nav-item" href="#"> Schedule </a>
+                        <a class="nav-item" href="#"> Updates </a>
+
+                        <span class="nav-item">
+                        <a class="button is-primary is-inverted" href="https://github.com/weirdpuppy/netcast">
+                            <span class="icon">
+                            <i class="fa fa-github"></i>
+                            </span>
+                        <span>Download</span>
+                        </a>
+                        </span>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <div class="content">
+                <p class="title is-2">Weekly Updates</p>
+                <br>
+            </div>
+
+        </div>
+
+
+        <div class="container" id="root">
+
+            <tabs>
+                <tab name="Overall" :selected="true">
+                    <div class="content">
+                        <p class="title is-4"><a href="#">February </a></p>
+                        <div class="box">
+
+                            <div class="level">
+                                <div class="level-left">
+                                    <p class="subtitle">
+                                        <strong></strong>First Project Meeting</p>
+                                </div>
+                                <div class="level-right">
+                                    <p class="highlight">2/12/2017 </p>
+                                </div>
+                            </div>
+                            <p>
+                                Created project website, synched up github accounts, wrote first draft of requirements page, updated team bios. Held first official team meeting @coffea 2/8/2017.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </tab>
+                <tab name="Nate">
+                    <div class="content">
+                        <p class="title is-4"><a href="#">February </a></p>
+                        <div class="box">
+                            <div class="level">
+                                <div class="level-left">
+                                    <p class="subtitle">
+                                        <strong></strong>Title</p>
+                                </div>
+                                <div class="level-right">
+                                    <p class="highlight">date </p>
+                                </div>
+                            </div>
+
+                            <p>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                </tab>
+                <tab name="Nikki">
+                    <div class="content">
+                        <p class="title is-4"><a href="#">February </a></p>
+                        <div class="box">
+
+                            <div class="level">
+                                <div class="level-left">
+                                    <p class="subtitle">
+                                        <strong></strong>Title</p>
+                                </div>
+                                <div class="level-right">
+                                    <p class="highlight">date </p>
+                                </div>
+                            </div>
+                            <p>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                </tab>
+                <tab name="Roxanne">
+                    <div class="content">
+                        <p class="title is-4"><a href="#">February </a></p>
+                        <div class="box">
+
+                            <div class="level">
+                                <div class="level-left">
+                                    <p class="subtitle">
+                                        <strong></strong>Website Creation + Integration</p>
+                                </div>
+                                <div class="level-right">
+                                    <p class="highlight">2/12/2017 </p>
+                                </div>
+                            </div>
+                            <p>
+                                Created Netcast repository on Github. Wrote index.html, team.html, updates.html and pushed to repo. Instructed team mates how to download and use git. Integrated javascript to project website. Began researching Custom Receivers through Google Chromecast wiki.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </tab>
+            </tabs>
+            <br>
+            <br>
+        </div>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Made lovingly with <a href="http://bulma.io/">Bulma</a> + <a href="https://vuejs.org/">Vue.js</a>.
+                </p>
+                <p>
+                    <a class="icon" href="#">
+                        <i class="fa fa-hand-peace-o"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+    <script src="./js/main.js">
+    </script>
+
+</body>
+
+</html>
