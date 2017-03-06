@@ -127,6 +127,162 @@
                 <tab name="Design">
                     <div class="content">
 
+                        <h4> Overview </h4>
+
+                        <p>
+
+                            The Chromecast is a piece of technology developed by Google that streams digital media to a television via a small dongle. This device can be controlled by a mobile phone or a computer. On its own, a Chromecast cannot do many things, but when paired with something else it turns a “dumb” TV into a “smart” TV. The goal of the project is to create a game that can be ran on the chromecast. The controller will be the touch interface of the device and the screen where the actual game is will be the TV. The current goal is to have a chromecast implementation of an existing <a href="http://randolphburt.github.io/Centipede-Angular/">Centipede game</a>. This game is a recreation of the the classic arcade game Centipede. The game will undergo a thorough redesign after the chromecast implementation is done. The plan is to update the graphics, give it a dynamic window size that changes depending on the size of the screen, and add functional home and pause screens.
+
+                        </p>
+
+                        <p>
+                            The main goal of this project is to learn programming with the Chromecast. The online documentation is there, the team just has to find a way to apply all of the information available to the situation at hand. None of the group members have experience developing with the chromecast, so this will be a great learning experience for everyone.
+                        </p>
+
+                        <hr>
+
+                        <h4> Environment </h4>
+
+                        <p>
+                            The environment that will be used for this project is the Chrome Web Browser. The applications that we will be making will be web apps hosted through github. There are many different parts that must work together harmoniously for the project to function correctly. The operating system can be anything that runs chrome smoothly. For testing, we will be using macOS Sierra and Windows 10.
+                        </p>
+
+                        <p>
+                            There are many different languages that will be intermingling and functioning together. The following will be included in the project: js, html, css. The designs for the sprites will be made in Photoshop and Illustrator.
+                        </p>
+
+                        <figure class="image is-2by1">
+                            <img src="/images/sender_receiver_diagram.png">
+                        </figure>
+
+
+                        <p>
+                            There will be two separate web pages that will “speak” to each other. They are called the sender and receiver. The sender is the phone or mobile device being used that sends the information and actions to the receiver so that it can handle the information and display actions. Everything for this project will be hosted through github and available on the Chrome web browser.
+                        </p>
+
+                        <hr>
+
+                        <h4> Module Descriptions and Data Flow </h4>
+
+                        <br>
+
+                        <img src="/images/Senior_design_flowchart.png">
+
+                        <p>
+                            There will be two major pieces for this project, a sender and a receiver.
+                        </p>
+
+                        <h5> <em> Sender Pseudocode  </em></h5>
+
+
+
+
+
+                        <ul>
+                            <li> Display user controls </li>
+                            <li> When screen is cast: </li>
+                            <ul>
+                                <li> Establish connection with receiver </li>
+                                <li> Listen for user input </li>
+                                <li> While receiving input: </li>
+                                <ul>
+                                    <li> Package input into message </li>
+                                    <li> Send message to receiver </li>
+
+                                </ul>
+
+                                <li> Close connection </li>
+                            </ul>
+
+                        </ul>
+
+                        <h5> <em> Receiver Pseudocode  </em></h5>
+                        <ul>
+                            <li>When screen is cast: </li>
+                            <ul>
+                                <li> Load game </li>
+                                <li> Establish connection with sender </li>
+                                <li> On receive message: </li>
+                                <ul>
+                                    <li> Determine command</li>
+                                    <li> Execute command </li>
+                                    <li> Update Screen </li>
+                                </ul>
+                                <li> Close connection </li>
+                                <li> Display final game screen </li>
+                            </ul>
+                        </ul>
+
+                        <h5> <em> Sender Size Estimate: 400 lines </em></h5>
+                        <h5> <em> Receiver Size Estimate: 200 lines </em></h5>
+                        <h5> <em> Game size: 2000 lines </em></h5>
+
+                        <hr>
+
+                        <h4> User Screens </h4>
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes.png">
+                        </figure>
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes2.png">
+                        </figure>
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes3.png">
+                        </figure>
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes4.png">
+                        </figure>
+
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes5.png">
+                        </figure>
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes6.png">
+                        </figure>
+
+                        <br>
+                        <figure class="image is-3by2">
+                            <img src="/images/wireframes7.png">
+                        </figure>
+
+
+
+                        <hr>
+
+                        <h4> User Scenarios </h4>
+
+                        <ul>
+                            <li> When user opens the link in Chrome on their phone, Chromecast immediately tries to connect. </li>
+                            <ul>
+                                <li> If it connects, then netcast screen appears on monitor. </li>
+                                <li>If not display error message. </li>
+                            </ul>
+                            <li> User hits start on the phone and the monitor displays game screen (but only if chromecast is detected). </li>
+                            <li> User hits left or right arrow on the phone, then the sprite moves left or right on the monitor. </li>
+                            <li> User hits “A” button on the phone, sprite fires upwards on monitor </li>
+                            <li> User hits Triangle button on phone, game pauses </li>
+                            <li> When game is paused, must hit triangle again to restart game. </li>
+                            <li> If the connection is dropped, the game is paused. </li>
+                            <li>User hits rectangle button on phone, menu screen appears. </li>
+                            <ul>
+                                <li> User hits help, displays game instructions. Must press back to exit out of screen, returns to menu screen. </li>
+                                <li> User hits options, takes to screen showing all options available to user, user hits one to change game. Must press back to take them back to menu. </li>
+                                <li>User hits “x” and closes menu. </li>
+
+                            </ul>
+                            <li> User passes a level, must press “B” on phone to continue. </li>
+                            <li> User wins game, must go back to title screen. </li>
+                            <li> User loses game, must press “B” to restart game. </li>
+                        </ul>
+
+
+
                     </div>
                 </tab>
                 <tab name="Schedule">
