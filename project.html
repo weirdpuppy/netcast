@@ -50,7 +50,7 @@
                         <a class="nav-item" href="/netcast/team.html"> Team </a>
                         <a class="nav-item" href="/netcast/updates.html"> Updates </a>
                         <span class="nav-item">
-                        <a class="button is-primary is-inverted" href="https://github.com/weirdpuppy/netcast">
+                        <a class="button is-primary is-inverted" href="https://github.com/weirdpuppy/centipede">
                             <span class="icon">
                             <i class="fa fa-github"></i>
                             </span>
@@ -343,49 +343,335 @@
                 <tab name="Testing">
                     <div class="content">
                       <p>
-                        The main purpose of this project is to produce a game that is playable on a television using a Chromecast device. Because of this, there will be an extra focus on the connection between the device and the Chromecast with our testing.
-                      </p>
+                          The main purpose of this project is to produce a game that is playable on a television using a Chromecast device. Because of this, there will be an extra focus on the connection between the device and the Chromecast with our testing. 
+                        </p>
 
                     <h4> Unit Testing </h4>
                       <p>
-                        There are many different modules in the project that must work together to give the finished product. To confirm that all modules are working they will be tested independent from one another. The primary tests for this portion will be as follows:
-                      </p>
+                        There are many different modules in the project that must work together to give the finished product. To confirm that all modules are working they will be tested independent from one another. The primary tests for this portion will be as follows, each bullet point is representative for a module being tested:
+                        </p>
                       <ul>
-                        <li>Connecting the sender module to the receiver module.</li>
-                        <li>Registering keypresses when connected.</li>
-                        <li> Use of “Cast” button. </li>
-                        <li> Displaying introduction and pause screen. </li>
-                        <li> Movement of player sprite using clickable controller. </li>
-                        <li> Movement of player sprite using touchable controller. </li>
-                        <li> Player and enemy sprite hit detection. </li>
-                        <li> Player shooting animation and enemy hit detection.</li>
-                        <li> Dynamic screen size. </li>
-                        <li> Level changing. </li>
-                        <li> Displaying pause screen </li>
-
+                          <li>Connecting the sender module to the receiver module.
+                               <ul>
+                                   <li>Manually calling appropriate functions to connect.</li>
+                              </ul>
+                          </li>
+                        <li>Registering keypresses when connected.
+                          <ul>
+                                   <li>Pressing any buttons on screen, which are then handled.</li>
+                              </ul>
+                          </li>
+                        <li> Use of “Cast” button. 
+                           <ul>
+                                   <li>Pressing the "Click to Cast" button, then connecting receiver and sender.</li>
+                              </ul>
+                          </li>
+                        <li>Displaying splash screen and all associated buttons.
+                          <ul>
+                                   <li>When the URL is accessed, display screen with functioning buttons</li>
+                              </ul>
+                          </li>
+                          <li> Use of “Instructions” button. 
+                          <ul>
+                                   <li>When “instructions” is pressed, a pop-up appears with the background.</li>
+                              </ul>
+                          </li>
+                        <li> Movement of player sprite using clickable controller. 
+                          <ul>
+                                   <li>Buttons clicks are handled, and turned into movement on screen.</li>
+                              </ul>
+                          </li>
+                        <li> Movement of player sprite using touchable controller.
+                          <ul>
+                                   <li>Buttons presses are handled, and turned into movement on screen.</li>
+                              </ul>
+                          </li>
+                        <li> Player and enemy sprite hit detection.
+                          <ul>
+                                   <li>If a player is hit, then they die. If an enemy hits a mushroom/other enemy, the appropriate action takes place.</li>
+                              </ul>
+                          </li>
+                        <li> Player shooting animation and enemy hit detection.
+                          <ul>
+                                   <li>When firing, if an enemy/mushroom is shot, the appropriate action takes place.</li>
+                              </ul>
+                          </li>
+                        <li> Dynamic screen size.
+                          <ul>
+                                   <li>All screen sizes/resolutions are compatible.</li>
+                              </ul>
+                          </li>
+                        <li> Level changing. 
+                          <ul>
+                                   <li>After each level is finished, the level is reset and difficulty increased.</li>
+                              </ul>
+                          </li>
+                        <li> Displaying pause screen 
+                          <ul>
+                                   <li>When rectangle is pressed, “Paused” is shown on screen and all animations/events are stopped.</li>
+                              </ul>
+                          </li>
+                        <li> Game Over functionality
+                          <ul>
+                                   <li>Display game over, and wait for click to restart.</li>
+                              </ul>
+                          </li>
                       </ul>
                       <hr>
                       <h4> Integration Testing </h4>
 
                       <p>
-                        In this stage all of the individual modules will be combined and tested with each other. There is a lot of communication between the separate modules, so it is vital that they all function together properly. The same tests will be conducted as above, but with all of the parts working concurrently. This is what the end user will be using, so full functionality is a necessity.
+                          In this stage all of the individual modules will be combined and tested with each other. There is a lot of communication between the separate modules, so it is vital that they all function together properly. The same tests will be conducted as above, but with all of the parts working concurrently. This is what the end user will be using, so full functionality is a necessity. In this step, the combined project will be tested on the most stable platform to ensure that all issues present (if any) are caused due to coding errors.
                       </p>
                       <hr>
 
-                      <h4> System Testing </h4
+                        <h4> System Testing </h4>
 
                       <p>
-                      After full integration is complete, the project as a whole will be analyzed to see whether it meets all specifications and requirements set out at the beginning. The main goal here is to test as many different devices as possible to confirm that the design will function universally. The browser that will be tested is the Chrome browser, as it is the only browser that is officially Chromecast supported. The devices being tested will include: Apple iPhone, Apple iPad, Apple MacBook Pro, Windows PC, Android Phone, and Android Tablet. Extensive testing will be done on all platforms.
-                      <p>
+                           After full integration is complete, the project as a whole will be analyzed to see whether it meets all specifications and requirements set out at the beginning. The main goal here is to test as many different devices as possible to confirm that the design will function universally. The browser that will be tested is the Chrome browser, as it is the only browser that is officially Chromecast supported. The devices being tested will include: Apple iPhone (Chrome version 57.0.2987.137), Apple MacBook Pro (version 57.0.2987.133), Windows PC (version 57.0.2987.133), Chromebook (version 57.0.2987.146), and Android Phone (version 57.0.2987.132). Extensive testing will be done on all platforms. Some of the platforms do not have any real functionality, but it was chosen to leave them in for continuity. Below, Table 1 contains the results of the testing. The tests being conducted correspond to the individual modules listed above, but altogether this time on multiple platforms. 
+                        <p>
                         <hr>
 
                       <h4> Customer Testing </h4>
 
 
                       <p>
-                      Once all other aspects have been tested, the project will be opened to users. Focus groups will be created that will test the project as a finished product and give us feedback. There will be a wide range of users in these groups, so that we can have the best overall experience for the average person. The main areas we will be looking at in user testing will be: functionality of the game on other devices than what was initially tested, performance for each individual user, and overall quality of the experience for the user.
-                    </p>
+                          Once all other aspects have been tested, the project will be opened to users. Focus groups will be created that will test the project as a finished product and give us feedback. There will be a wide range of users in these groups, so that we can have the best overall experience for the average person. The main areas we will be looking at in user testing will be: functionality of the game on other devices than what was initially tested, performance for each individual user, and overall quality of the experience for the user. The results of this testing can be found in Table 2 below. 
+                        </p>
+                        
+                        Key: Y= Functional	N= Not Functional	N/A=Does Not Apply
+                        <table class="table is-bordered is-striped is-narrow">
+                            <thead>
+                                <tr>
+                                    <th>TABLE 1</th>
+                                    <th>MacBook</th>
+                                    <th>Windows PC</th>
+                                    <th>Chromebook</th>
+                                    <th>iPhone</th>
+                                    <th>Android</th>
+                                </tr>
+                            </thead>
 
+                            <tbody>
+                                <tr>
+                                    <td>Connecting Sender to Receiver</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y </td>
+                                    <td>N</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>Registering Keypresses</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y </td>
+                                    <td>N</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>"Click to Cast" Functionality</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>Splash Screen Functionality</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>"Instructions" Functionality</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>Player movement via clicking</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <td>Player movement via touching</td>
+                                    <td>N/A</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>Player and enemny hit detection</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N</td>
+                                    <td>Cannot test due to no connection</td>
+                                </tr>
+                                <tr>
+                                    <td>Dynamic Screen Size</td>
+                                    <td>TV Dependent</td>
+                                    <td>TV Dependent</td>
+                                    <td> TV Dependent</td>
+                                    <td>TV Dependent</td>
+                                    <td>TV Dependent</td>
+                                </tr>
+                                <tr>
+                                    <td>Level Changing</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N</td>
+                                    <td>Cannot test due to no connection</td>
+                                </tr>
+                                <tr>
+                                    <td>Pause Screen</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>Game Over</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>N</td>
+                                    <td>Y</td>
+                                </tr>
+                            </tbody>
+                        </table>
+<table class="table is-bordered is-striped is-narrow">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">User Info</th>
+                                    <th colspan="4">Testing Results (Quotes from Users)</th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th>Age</th>
+                                    <th>Sex</th>
+                                    <th>Game Experience (Scale from 1-5, % being highest)</th>
+                                    <th>Design (Scale from 1-5)</th>
+                                    <th>Controls (Scale from 1-5)</th>
+                                    <th>Interest (Scale from 1-5)</th>
+                                    <th>Overall (Comments)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>User 1</td>
+                                    <td>21</td>
+                                    <td>M</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>The game is beautiful, and I really like it a lot. Only issue I see is control-scheme being hard to grasp.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 2</td>
+                                    <td>21</td>
+                                    <td>F</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>The game works well, however the controller was difficult to use.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 3</td>
+                                    <td>22</td>
+                                    <td>F</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>I like the colors, the pixel art is pretty too. I just wish it would work on a smaller device. </td>
+                                </tr>
+                                <tr>
+                                    <td>User 4</td>
+                                    <td>20</td>
+                                    <td>F</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>I love the games look, its really cool. I had never heard of this game, but I like it. Controls were a little weird.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 5</td>
+                                    <td>48</td>
+                                    <td>M</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>I played this game when I was younger, so this is really cool to see done with this new technology.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 6</td>
+                                    <td>45</td>
+                                    <td>F</td>
+                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>This used to be in the arcade I worked at, I love the concept. It is also really pretty. I have trouble controlling the guy though.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 7</td>
+                                    <td>28</td>
+                                    <td>M</td>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>The game is hard to control, but when you get past it, it is a beautiful game.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 8</td>
+                                    <td>27</td>
+                                    <td>M</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>I used to have a version of this. This is a great version of it, well done.</td>
+                                </tr>
+                                <tr>
+                                    <td>User 9</td>
+                                    <td>18</td>
+                                    <td>F</td>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>I haven’t seen this game before, but I really like it. I would download this. </td>
+                                </tr>
+                                <tr>
+                                    <td>User 10</td>
+                                    <td>21</td>
+                                    <td>M</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>This game is so cool, I haven’t seen any kind of game like this on Chromecast before. </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </tab>
             </tabs>
